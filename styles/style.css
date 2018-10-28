@@ -34,6 +34,59 @@ body {
     margin: 4rem;
 }
 
+.btn__menu {
+    width: 4rem;
+    background-color: #fff;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    top: 15px;
+    left: 10px;
+    transition: all 200ms;
+
+}
+
+.btn__menu:before,
+.btn__menu:after {
+    /* position: absolute; */
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 3px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    transition: all 400ms;
+}
+
+.btn__menu:before {
+    top: -12px;
+}
+.btn__menu:after {
+    /* position: relative; */
+    top: 12px;
+}
+
+/* Hamburger menu animation */
+.btn-active {
+    background-color: transparent;
+    box-shadow: 0 5px 5px rgba(0,0,0,0);
+    transition: all 400ms;
+}
+
+.btn-active.btn__menu:before {
+    transform: rotate(135deg);
+    top: 5px;
+}
+
+.btn-active.btn__menu:after {
+    transform: rotate(225deg);
+    top: 5px;
+}
+
+
 .btn__link {
     font-size: 2rem;
     text-transform: uppercase;
@@ -41,19 +94,22 @@ body {
     color: #F1D302;
     transition: all 150ms;
     display: inline-block;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
 }
 
 .btn__link:hover,
 .btn__link:active {
     color: #F0F7EE;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* Main content area */
 .content {
     position: relative;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-150%);
 }
 
 .content__title {
@@ -62,7 +118,8 @@ body {
 }
 
 .content__subtitle {
-    color: #FDFFFC;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
 }
 
 
@@ -90,3 +147,24 @@ body {
 .nav__link:active {
     color: #EF8354;
 }
+
+
+
+/* Media Queries */
+
+/* Screen width less than 1280px */
+@media only screen and (max-width: 1280px) {
+    .wrapper__sidebar {
+        position: fixed;
+        background: #fff;
+        z-index: 1000;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper__sidebar {
+        width: 21rem;
+    }
+}
+
