@@ -170,5 +170,7 @@ body {
     .wrapper__sidebar {
         width: 21rem;
     }
+    .content {
+        transform: translateY(-100%);
+    }
 }
-
