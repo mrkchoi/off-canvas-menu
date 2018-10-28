@@ -20,11 +20,8 @@ menuOpen.addEventListener('click', function() {
     
 });
 
-
 // Event listener [click on main content area to close sidebar. This applies to smaller screen widths < 1280px.]
 window.addEventListener('click', function(e) {
-    // console.log('clicked!');
-    console.log(e);
     if (window.innerWidth <= 1280 && document.querySelector('.wrapper__sidebar.open')) {
         if(e.clientX > 310) {
             sidebar.style.display = 'none';
