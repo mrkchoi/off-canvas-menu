@@ -1,0 +1,38 @@
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrappers */
+.wrapper__parent {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper__sidebar {
+    width: 32rem;
+    height: 100vh;
+    padding: 5rem;
+}
+
+.wrapper__main {
+    background-color: #235789;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content__title,
+.content__subtitle {
+    color: #F1D302;
+    font-weight: 800;
+}
