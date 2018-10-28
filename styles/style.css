@@ -29,7 +29,7 @@ body {
 
 
 
-/* Button */
+/* Navbutton */
 .btn {
     margin: 4rem;
 }
@@ -51,7 +51,6 @@ body {
 
 .btn__menu:before,
 .btn__menu:after {
-    /* position: absolute; */
     content: '';
     position: absolute;
     width: 4rem;
@@ -65,9 +64,9 @@ body {
     top: -12px;
 }
 .btn__menu:after {
-    /* position: relative; */
     top: 12px;
 }
+
 
 /* Hamburger menu animation */
 .btn-active {
@@ -105,23 +104,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Main content area */
-.content {
-    position: relative;
-    top: 50%;
-    transform: translateY(-150%);
-}
-
-.content__title {
-    color: #F1D302;
-    font-weight: 800;
-}
-
-.content__subtitle {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 2rem;
-}
-
 
 /* Off-canvas nav */
 .nav__header {
@@ -150,6 +132,25 @@ body {
 
 
 
+/* Main content area */
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-150%);
+}
+
+.content__title {
+    color: #F1D302;
+    font-weight: 800;
+}
+
+.content__subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+}
+
+
+
 /* Media Queries */
 
 /* Screen width less than 1280px */
@@ -158,6 +159,9 @@ body {
         position: fixed;
         background: #fff;
         z-index: 1000;
+    }
+    .wrapper__sidebar {
+        width: 21rem;
     }
 
 }
